@@ -1,0 +1,30 @@
+@keyframes draw-outer {
+  0% {
+    stroke-dashoffset: 69;
+  }
+  100% {
+    stroke-dashoffset: 0;
+  }
+}
+
+.animate-outer {
+  stroke-dashoffset: 69;
+  stroke-dasharray: 69;
+  animation: 1s draw-outer forwards;
+}
+
+@keyframes draw-v {
+  0% {
+    stroke-dashoffset: 25;
+  }
+  100% {
+    stroke-dashoffset: 0;
+  }
+}
+
+.animate-inner {
+  stroke-dashoffset: 25;
+  stroke-dasharray: 25;
+  animation: 1s draw-v forwards;
+  animation-delay: 1s;
+}

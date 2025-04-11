@@ -1,0 +1,46 @@
+@keyframes draw-n {
+  0% {
+    stroke-dashoffset: 62;
+  }
+  100% {
+    stroke-dashoffset: 0;
+  }
+}
+
+.animate-n {
+  stroke-dashoffset: 62;
+  stroke-dasharray: 62;
+  animation: 2.5s draw-n forwards;
+  animation-delay: 3s;
+}
+
+@keyframes draw-lower-i {
+  0% {
+    stroke-dashoffset: 32;
+  }
+  100% {
+    stroke-dashoffset: 0;
+  }
+}
+
+.animate-lower-i {
+  stroke-dashoffset: 32;
+  stroke-dasharray: 32;
+  animation: 2s draw-lower-i forwards;
+  animation-delay: 3s;
+}
+
+@keyframes fade-in-dot {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.animate-upper-i {
+  opacity: 0;
+  animation: 1s fade-in-dot ease-in forwards;
+  animation-delay: 5s;
+}

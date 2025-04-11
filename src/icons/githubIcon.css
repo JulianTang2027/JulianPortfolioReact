@@ -1,0 +1,16 @@
+@keyframes draw {
+  0% {
+    stroke-dashoffset: 75;
+  }
+
+  100% {
+    stroke-dashoffset: 0;
+  }
+}
+
+.animate {
+  stroke-dashoffset: 75;
+  stroke-dasharray: 75;
+  animation: 2s draw forwards;
+  animation-delay: 2s;
+}
