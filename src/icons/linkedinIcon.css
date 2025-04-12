@@ -10,8 +10,8 @@
 .animate-n {
   stroke-dashoffset: 62;
   stroke-dasharray: 62;
-  animation: 2.5s draw-n forwards;
-  animation-delay: 3s;
+  animation: 2s draw-n forwards;
+  /* animation-delay: 3s; */
 }
 
 @keyframes draw-lower-i {
@@ -27,7 +27,7 @@
   stroke-dashoffset: 32;
   stroke-dasharray: 32;
   animation: 2s draw-lower-i forwards;
-  animation-delay: 3s;
+  /* animation-delay: 3s; */
 }
 
 @keyframes fade-in-dot {
@@ -42,5 +42,5 @@
 .animate-upper-i {
   opacity: 0;
   animation: 1s fade-in-dot ease-in forwards;
-  animation-delay: 5s;
+  animation-delay: 2s;
 }

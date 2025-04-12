@@ -1,0 +1,45 @@
+.navBar {
+  display: flex;
+  border-radius: 1rem;
+  justify-content: space-between;
+  padding: 0;
+  list-style: none;
+  margin: 1.5rem 3rem;
+  position: sticky;
+}
+
+.navBarLeft {
+  display: flex;
+  gap: 1rem;
+}
+
+.navBarRight {
+  display: flex;
+  gap: 1rem;
+}
+
+.navBarLeft a {
+  cursor: pointer;
+}
+
+.navBarLeft a:hover {
+  transform: translateY(-5px);
+  cursor: pointer;
+}
+
+.navBarRight a {
+  cursor: pointer;
+}
+.navBarRight a:hover {
+  transform: translateY(-5px);
+  cursor: pointer;
+}
+
+.navBar a,
+.navBar a:link,
+.navBar a:visited,
+.navBar a:hover,
+.navBar a:active {
+  color: inherit;
+  text-decoration: none;
+}

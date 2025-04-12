@@ -1,0 +1,48 @@
+@keyframes drawpalette {
+  /* Path length is 60 */
+  0% {
+    stroke-dashoffset: 60;
+  }
+  100% {
+    stroke-dashoffset: 0;
+  }
+}
+
+.animatepalette {
+  stroke-dasharray: 60;
+  stroke-dashoffset: 60;
+  animation: 2s drawpalette forwards;
+}
+
+@keyframes drawcircle {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.animatecircle1 {
+  opacity: 0;
+  animation: 0.25s drawcircle forwards;
+  animation-delay: 2s;
+}
+
+.animatecircle2 {
+  opacity: 0;
+  animation: 0.25s drawcircle forwards;
+  animation-delay: 2.25s;
+}
+
+.animatecircle3 {
+  opacity: 0;
+  animation: 0.25s drawcircle forwards;
+  animation-delay: 2.5s;
+}
+
+.animatecircle4 {
+  opacity: 0;
+  animation: 0.25s drawcircle forwards;
+  animation-delay: 2.75s;
+}

@@ -11,6 +11,7 @@
   stroke-dashoffset: 69;
   stroke-dasharray: 69;
   animation: 1s draw-outer forwards;
+  /* animation-delay: 3s; */
 }
 
 @keyframes draw-v {
@@ -26,5 +27,5 @@
   stroke-dashoffset: 25;
   stroke-dasharray: 25;
   animation: 1s draw-v forwards;
-  animation-delay: 1s;
+  /* animation-delay: 3s; */
 }

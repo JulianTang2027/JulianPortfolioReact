@@ -1,0 +1,91 @@
+@keyframes circle {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.animatecircle {
+  opacity: 0;
+  animation: 1.5s circle forwards;
+}
+
+@keyframes drawline {
+  0% {
+    stroke-dashoffset: 5;
+  }
+
+  100% {
+    stroke-dashoffset: 0;
+  }
+}
+
+.animateline1 {
+  stroke-dashoffset: 5;
+  stroke-dasharray: 5;
+  animation: 0.25s drawline forwards;
+  animation-delay: 1.5s;
+}
+
+.animateline2 {
+  stroke-dashoffset: 5;
+  stroke-dasharray: 5;
+  animation: 0.25s drawline forwards;
+  animation-delay: 1.75s;
+}
+
+.animateline3 {
+  stroke-dashoffset: 5;
+  stroke-dasharray: 5;
+  animation: 0.25s drawline forwards;
+  animation-delay: 2s;
+}
+
+.animateline4 {
+  stroke-dashoffset: 5;
+  stroke-dasharray: 5;
+  animation: 0.25s drawline forwards;
+  animation-delay: 2.25s;
+}
+
+.animateline5 {
+  stroke-dashoffset: 5;
+  stroke-dasharray: 5;
+  animation: 0.25s drawline forwards;
+  animation-delay: 2.5s;
+}
+
+.animateline6 {
+  stroke-dashoffset: 5;
+  stroke-dasharray: 5;
+  animation: 0.25s drawline forwards;
+  animation-delay: 2.75s;
+}
+
+.animateline7 {
+  stroke-dashoffset: 5;
+  stroke-dasharray: 5;
+  animation: 0.25s drawline forwards;
+  animation-delay: 3s;
+}
+
+.animateline8 {
+  stroke-dashoffset: 5;
+  stroke-dasharray: 5;
+  animation: 0.25s drawline forwards;
+  animation-delay: 3.25s;
+}
+
+@keyframes spin {
+  100% {
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+
+.animatesun {
+  animation: spin 4s infinite linear;
+  transform-origin: center;
+}

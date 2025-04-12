@@ -1,4 +1,4 @@
-import React, { useRef } from "react";
+import React from "react";
 import "./linkedinIcon.css";
 
 const LinkedinIcon = () => {
@@ -11,7 +11,7 @@ const LinkedinIcon = () => {
       viewBox="0 0 24 24"
       fill="none"
       stroke="currentColor"
-      stroke-width="2"
+      stroke-width="1"
       stroke-linecap="round"
       stroke-linejoin="round"
       class="feather feather-linkedin"
