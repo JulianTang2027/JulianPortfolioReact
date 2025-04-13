@@ -8,6 +8,10 @@
   position: sticky;
 }
 
+.navBar a svg {
+  stroke: var(--icon-color);
+}
+
 .navBarLeft {
   display: flex;
   gap: 1rem;

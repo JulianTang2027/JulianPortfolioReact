@@ -1,0 +1,15 @@
+/* Path length 60.66 */
+@keyframes drawmoon {
+  0% {
+    stroke-dashoffset: 61;
+  }
+  100% {
+    stroke-dashoffset: 0;
+  }
+}
+
+.animatemoon {
+  stroke-dasharray: 61;
+  stroke-dashoffset: 61;
+  animation: 2s drawmoon forwards;
+}

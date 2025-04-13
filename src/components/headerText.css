@@ -1,0 +1,28 @@
+@keyframes typewriter {
+  0% {
+    width: 0ch;
+  }
+  100% {
+    width: 6ch;
+  }
+}
+
+@keyframes blink {
+  0% {
+    border-color: transparent;
+  }
+  50% {
+    border-color: black;
+  }
+
+  100% {
+    border-color: transparent;
+  }
+}
+div h1 {
+  width: 0%;
+  overflow: hidden;
+  animation: 1s typewriter steps(6) forwards, 1s blink step-end;
+  white-space: nowrap;
+  border-right: 3px solid black;
+}

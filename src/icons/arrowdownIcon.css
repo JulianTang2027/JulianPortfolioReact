@@ -1,0 +1,50 @@
+.arrowdownicon {
+  width: 10em;
+  height: 10em;
+  color: var(--icon-color);
+  animation: arrowbounce 1.5s ease-in-out infinite;
+  animation-delay: 5s;
+}
+
+@keyframes drawarrowline {
+  0% {
+    stroke-dashoffset: 14;
+  }
+  100% {
+    stroke-dashoffset: 0;
+  }
+}
+
+.arrowdownline {
+  stroke-dasharray: 14;
+  stroke-dashoffset: 14;
+  animation: 0.7s drawarrowline forwards;
+  animation-delay: 4s;
+}
+
+@keyframes drawarrowarch {
+  0% {
+    stroke-dashoffset: 20;
+  }
+  100% {
+    stroke-dashoffset: 0;
+  }
+}
+
+.arrowdownarch {
+  stroke-dasharray: 20;
+  stroke-dashoffset: 20;
+  animation: 0.7s drawarrowarch forwards;
+  animation-delay: 4.7s;
+}
+
+@keyframes arrowbounce {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(1em);
+  }
+}
