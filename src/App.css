@@ -1,12 +1,12 @@
 :root {
-  /* Light mode variables (default) */
+  /* Light mode colors */
   background-color: #f9f7f4;
   --text-color: black;
   --icon-color: black;
 }
 
 .dark {
-  /* Dark mode variables (override) */
+  /* Dark mode colors */
   background-color: #333333;
   --text-color: white;
   --icon-color: white;

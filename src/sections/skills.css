@@ -1,0 +1,19 @@
+.skillsContainer {
+  max-width: 1000px;
+  color: var(--text-color);
+  margin: auto;
+}
+
+.skillCardContainer {
+  margin-top: 5em;
+  display: flex;
+  flex-direction: row;
+}
+
+.skillsSpan {
+  font-family: Poppins;
+}
+
+.skillsHeader {
+  font-family: Poppins;
+}

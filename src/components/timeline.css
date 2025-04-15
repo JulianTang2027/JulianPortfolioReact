@@ -1,0 +1,36 @@
+.timeline .checkpoint {
+  color: var(--text-color);
+}
+
+.timeline {
+  margin: 5em auto;
+  max-width: 34.15em;
+  position: relative;
+}
+
+.checkpoint {
+  max-width: 34em;
+  padding-top: 2em;
+  padding-bottom: 2em;
+  position: relative;
+}
+
+.checkpoint div {
+  border: 2px solid var(--text-color);
+  border-radius: 1em;
+  padding: 1.5em;
+}
+
+.checkpoint p {
+  line-height: 27px;
+}
+
+.checkpoint:nth-child(odd) {
+  border-left: 3px solid var(--text-color);
+  transform: translateX(17em);
+}
+
+.checkpoint:nth-child(even) {
+  border-right: 3px solid var(--text-color);
+  transform: translateX(-16.93em);
+}

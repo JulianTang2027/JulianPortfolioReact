@@ -2,9 +2,10 @@
   display: flex;
   justify-content: center;
   flex-direction: column;
+  height: 100vh;
 }
 
-h2 {
+.subtitleText {
   color: var(--text-color);
   animation: 1s subtitletypewriter steps(17) forwards;
   animation-delay: 2s;

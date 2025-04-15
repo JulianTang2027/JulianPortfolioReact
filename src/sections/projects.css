@@ -1,0 +1,11 @@
+.projectsContainer {
+  max-width: 1000px;
+  color: var(--text-color);
+  margin: auto;
+  gap: 50px 50px;
+}
+
+.projectHeader {
+  font-family: Poppins;
+  z-index: 2;
+}

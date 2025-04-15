@@ -9,9 +9,9 @@ const Header = () => {
   return (
     <div className="header">
       <NavBar />
-      <TypingEffect lines={["JULIAN", "TANG"]} speed={80} />
+      <TypingEffect lines={["Julian Tang"]} speed={80} />
       <div className="subtitleContainer">
-        <h2>Software Engineer</h2>
+        <h2 className="subtitleText">Software Engineer</h2>
       </div>
       <div className="arrowContainer">
         <ArrowdownIcon />

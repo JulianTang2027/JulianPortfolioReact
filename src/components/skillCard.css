@@ -1,0 +1,151 @@
+/* Main card styling */
+.skill-card {
+  position: relative;
+  width: 180px;
+  height: 180px;
+  font-size: 0.75rem;
+  background-clip: padding-box, border-box;
+  background-origin: border-box;
+  border: 2px solid transparent;
+  border-radius: 12px;
+  transition: all 500ms ease 100ms,
+    transform 250ms cubic-bezier(0.21, -0.56, 0.43, 1.53);
+}
+
+/* Handle hover effects */
+.skill-card.hovered {
+  transform: translateY(-5px);
+}
+
+/* Container for the blur effect */
+.blur-container {
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+  border-radius: 10px;
+}
+
+/* The actual blur effect element */
+.blur {
+  position: absolute;
+  top: -25%;
+  right: -25%;
+  width: 75%;
+  height: 75%;
+  opacity: 50%;
+  filter: blur(60px);
+  transition: width ease-in-out 300ms, height ease-in-out 300ms,
+    opacity ease-in-out 300ms;
+  backface-visibility: hidden;
+  transform: translate3d(0, 0, 0);
+}
+
+/* Expand blur on hover */
+.hovered .blur {
+  width: 100%;
+  height: 100%;
+  opacity: 70%;
+}
+
+/* Content container */
+.content {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+  width: 100%;
+}
+
+/* Logo styling */
+.image {
+  position: absolute;
+  transform: translate(20%, -30%);
+}
+
+.image img {
+  width: 50px;
+  height: 50px;
+  object-fit: contain;
+}
+
+/* Skill name styling */
+.name {
+  width: 100%;
+  padding: 8px 12px 2px 0;
+  font-size: 1.2rem;
+  font-weight: 500;
+  color: #282c34;
+  text-align: right;
+}
+
+/* Info section at bottom */
+.info {
+  width: 100%;
+  margin-top: auto;
+}
+
+/* Content wrapper for stats */
+.content-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  width: 100%;
+  height: 60px;
+  padding: 12px 8px;
+  font-weight: 500;
+  color: #282c34;
+  background: rgba(255, 255, 255, 0.65);
+  backdrop-filter: blur(4px);
+  border-bottom-right-radius: 10px;
+  border-bottom-left-radius: 10px;
+}
+
+/* Individual stat styling */
+.stat {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: 0.9rem;
+}
+
+/* Stat title styling */
+.stat-title {
+  font-family: monospace;
+  font-size: 0.8rem;
+  font-weight: normal;
+  opacity: 0.7;
+}
+
+/* Divider between stats */
+.divider {
+  height: 70%;
+  margin: 0 4px;
+  opacity: 0.15;
+  border-right: 1px solid #282c34;
+}
+
+/* Dark mode support */
+@media (prefers-color-scheme: dark) {
+  .content-wrapper {
+    background: rgba(30, 30, 30, 0.65);
+    color: #f0f4f8;
+  }
+
+  .name {
+    color: #f0f4f8;
+  }
+
+  .divider {
+    border-right: 1px solid #f0f4f8;
+  }
+}
+
+/* Grid container for multiple cards */
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 30px;
+  padding: 30px;
+}

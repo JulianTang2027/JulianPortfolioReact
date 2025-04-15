@@ -1,0 +1,37 @@
+.headercard {
+  width: 700px;
+  height: 600px;
+}
+
+/* Path length is 71.3 */
+@keyframes drawcardrect {
+  0% {
+    stroke-dashoffset: 73;
+  }
+  100% {
+    stroke-dashoffset: 0;
+  }
+}
+
+.cardrect {
+  stroke-dasharray: 73;
+  stroke-dashoffset: 73;
+  animation: 3s drawcardrect ease-in-out forwards;
+}
+
+/* Path legnth is 22 */
+@keyframes drawcardline {
+  0% {
+    stroke-dashoffset: 22;
+  }
+  100% {
+    stroke-dashoffset: 0;
+  }
+}
+
+.cardline {
+  stroke-dashoffset: 22;
+  stroke-dasharray: 22;
+  animation: 1s drawcardline forwards;
+  animation-delay: 3s;
+}
