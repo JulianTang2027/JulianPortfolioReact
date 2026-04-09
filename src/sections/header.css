@@ -1,37 +1,5 @@
-.headerText {
-  display: flex;
-  justify-content: center;
-  flex-direction: column;
-  height: 100vh;
-}
-
-.subtitleText {
-  color: var(--text-color);
-  animation: 1s subtitletypewriter steps(17) forwards;
-  animation-delay: 2s;
-  width: 0;
-  overflow: hidden;
-  white-space: nowrap;
-}
-
-.subtitleContainer {
-  margin-top: 2em;
-  display: flex;
-  justify-content: center;
-}
-
-@keyframes subtitletypewriter {
-  0% {
-    width: 0;
-  }
-
-  100% {
-    width: 17ch;
-  }
-}
-
-.arrowContainer {
-  margin-top: 12em;
-  display: flex;
-  justify-content: center;
+.header {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 4em 1.5em 2em;
 }
