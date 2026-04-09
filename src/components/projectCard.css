@@ -1,0 +1,130 @@
+.blockLink {
+  text-decoration: none;
+  color: inherit;
+  display: contents;
+}
+
+/* Block — the tetris piece */
+.projectBlock {
+  position: relative;
+  padding: 1.4em;
+  opacity: 0;
+  animation: blockAppear 0s linear forwards;
+}
+
+/* Grid spanning — tetris shapes */
+.span-wide {
+  grid-column: span 2;
+}
+
+.span-tall {
+  grid-row: span 2;
+}
+
+.span-big {
+  grid-column: span 2;
+  grid-row: span 2;
+}
+
+@keyframes blockAppear {
+  to {
+    opacity: 1;
+  }
+}
+
+/* Thin SVG border that traces in */
+.blockBorder {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+}
+
+.blockBorder rect {
+  fill: none;
+  stroke: var(--border-color);
+  stroke-width: 0.4;
+  stroke-dasharray: 400;
+  stroke-dashoffset: 400;
+  animation: traceBorder 1.4s ease forwards;
+}
+
+@keyframes traceBorder {
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+
+.projectBlock:hover .blockBorder rect {
+  stroke: var(--text-secondary);
+  transition: stroke 0.3s ease;
+}
+
+/* Content fades in after border draws */
+.blockContent {
+  position: relative;
+  opacity: 0;
+  animation: blockContentIn 0.6s ease forwards;
+}
+
+@keyframes blockContentIn {
+  to {
+    opacity: 1;
+  }
+}
+
+/* Icon */
+.blockIcon {
+  width: 1.6em;
+  height: 1.6em;
+  margin-bottom: 0.8em;
+}
+
+.blockIcon svg {
+  width: 100%;
+  height: 100%;
+  stroke: var(--text-color);
+  stroke-width: 1.5;
+  fill: none;
+}
+
+.blockIcon img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+/* Text */
+.projectBlock h3 {
+  font-size: 0.85rem;
+  font-weight: 500;
+  margin: 0;
+  color: var(--text-color);
+}
+
+.projectBlock p {
+  font-size: 0.78rem;
+  color: var(--text-secondary);
+  line-height: 1.6;
+  margin: 0.4em 0 0;
+}
+
+.blockTags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4em;
+  margin-top: 0.8em;
+}
+
+.blockTag {
+  font-size: 0.65rem;
+  color: var(--text-secondary);
+  letter-spacing: 0.02em;
+}
+
+.blockTag + .blockTag::before {
+  content: "/";
+  margin-right: 0.4em;
+  color: var(--border-color);
+}
