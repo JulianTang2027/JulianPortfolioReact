@@ -1,11 +1,13 @@
 .navBar {
   display: flex;
-  border-radius: 1rem;
+  align-items: center;
   justify-content: space-between;
   padding: 0;
   list-style: none;
   margin: 1.5rem 3rem;
   position: sticky;
+  top: 0;
+  z-index: 10;
 }
 
 .navBar a svg {
@@ -15,6 +17,28 @@
 .navBarLeft {
   display: flex;
   gap: 1rem;
+}
+
+.navBarCenter {
+  display: flex;
+  gap: 2rem;
+}
+
+.navBarCenter a,
+.navBarCenter a:link,
+.navBarCenter a:visited {
+  font-family: "Poppins", sans-serif;
+  font-size: 0.85rem;
+  font-weight: 400;
+  letter-spacing: 0.04em;
+  color: var(--nav-link-color);
+  text-decoration: none;
+  cursor: pointer;
+  transition: color 0.2s ease;
+}
+
+.navBarCenter a:hover {
+  color: var(--nav-link-hover);
 }
 
 .navBarRight {
@@ -27,23 +51,22 @@
 }
 
 .navBarLeft a:hover {
-  transform: translateY(-5px);
+  transform: translateY(-3px);
   cursor: pointer;
 }
 
 .navBarRight a {
   cursor: pointer;
 }
+
 .navBarRight a:hover {
-  transform: translateY(-5px);
+  transform: translateY(-3px);
   cursor: pointer;
 }
 
 .navBar a,
 .navBar a:link,
 .navBar a:visited,
-.navBar a:hover,
 .navBar a:active {
-  color: inherit;
   text-decoration: none;
 }
