@@ -1,11 +1,41 @@
 .projectsContainer {
-  max-width: 1000px;
+  position: relative;
+  max-width: 600px;
   color: var(--text-color);
-  margin: auto;
-  gap: 50px 50px;
+  margin: 0 auto;
+  padding: 3em 1.5em;
+  font-family: "Poppins", sans-serif;
 }
 
-.projectHeader {
-  font-family: Poppins;
-  z-index: 2;
+.projectsSubtitle {
+  position: relative;
+  z-index: 1;
+  font-size: 0.75rem;
+  font-style: italic;
+  color: var(--text-secondary);
+  margin: 0 0 1.5em;
+}
+
+.tetrisGrid {
+  position: relative;
+  z-index: 1;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 0;
+}
+
+@media (max-width: 768px) {
+  .tetrisGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 480px) {
+  .projectsContainer {
+    padding: 2em 1em;
+  }
+
+  .tetrisGrid {
+    grid-template-columns: 1fr;
+  }
 }

@@ -1,20 +1,62 @@
 .navBar {
   display: flex;
-  border-radius: 1rem;
+  align-items: center;
   justify-content: space-between;
   padding: 0;
   list-style: none;
   margin: 1.5rem 3rem;
   position: sticky;
+  top: 0;
+  z-index: 10;
 }
 
-.navBar a svg {
+.navBar a svg,
+.navBar .navIconButton svg {
   stroke: var(--icon-color);
+}
+
+.navIconButton {
+  background: none;
+  border: none;
+  padding: 0;
+  margin: 0;
+  color: inherit;
+  font: inherit;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  transition: transform 0.2s ease;
+}
+
+.navIconButton:hover {
+  transform: translateY(-3px);
 }
 
 .navBarLeft {
   display: flex;
   gap: 1rem;
+}
+
+.navBarCenter {
+  display: flex;
+  gap: 2rem;
+}
+
+.navBarCenter a,
+.navBarCenter a:link,
+.navBarCenter a:visited {
+  font-family: "Poppins", sans-serif;
+  font-size: 0.85rem;
+  font-weight: 400;
+  letter-spacing: 0.04em;
+  color: var(--nav-link-color);
+  text-decoration: none;
+  cursor: pointer;
+  transition: color 0.2s ease;
+}
+
+.navBarCenter a:hover {
+  color: var(--nav-link-hover);
 }
 
 .navBarRight {
@@ -27,23 +69,68 @@
 }
 
 .navBarLeft a:hover {
-  transform: translateY(-5px);
+  transform: translateY(-3px);
   cursor: pointer;
 }
 
 .navBarRight a {
   cursor: pointer;
 }
+
 .navBarRight a:hover {
-  transform: translateY(-5px);
+  transform: translateY(-3px);
   cursor: pointer;
 }
 
 .navBar a,
 .navBar a:link,
 .navBar a:visited,
-.navBar a:hover,
 .navBar a:active {
-  color: inherit;
   text-decoration: none;
+}
+
+@media (max-width: 768px) {
+  .navBar {
+    margin: 1rem 1.5rem;
+  }
+
+  .navBarCenter {
+    gap: 1.2rem;
+  }
+
+  .navBarCenter a,
+  .navBarCenter a:link,
+  .navBarCenter a:visited {
+    font-size: 0.78rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .navBar {
+    margin: 0.8rem 1rem;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0.5rem;
+  }
+
+  .navBarLeft {
+    order: 1;
+  }
+
+  .navBarRight {
+    order: 2;
+  }
+
+  .navBarCenter {
+    order: 3;
+    width: 100%;
+    justify-content: center;
+    gap: 1rem;
+  }
+
+  .navBarCenter a,
+  .navBarCenter a:link,
+  .navBarCenter a:visited {
+    font-size: 0.75rem;
+  }
 }

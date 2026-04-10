@@ -1,15 +1,14 @@
 import React, { useState, useEffect } from "react";
-import "../styles/navBar.css";
+import { Link } from "react-router-dom";
 import MailIcon from "../icons/mailIcon";
 import GithubIcon from "../icons/githubIcon";
 import LinkedinIcon from "../icons/linkedinIcon";
 import MoonIcon from "../icons/moonIcon";
 import SunIcon from "../icons/sunIcon";
-import PaletteIcon from "../icons/paletteIcon";
 import "./navBar.css";
 
 const NavBar = () => {
-  const [isDarkMode, setIsDarkMode] = useState(false);
+  const [isDarkMode, setIsDarkMode] = useState(true);
 
   useEffect(() => {
     if (isDarkMode) {
@@ -22,13 +21,24 @@ const NavBar = () => {
   const toggleTheme = () => {
     setIsDarkMode(!isDarkMode);
   };
+
   return (
-    <div className="navBar">
+    <nav className="navBar">
       <div className="navBarLeft">
-        <a onClick={toggleTheme}>{isDarkMode ? <SunIcon /> : <MoonIcon />}</a>
-        <a>
-          <PaletteIcon />
-        </a>
+        <button
+          type="button"
+          onClick={toggleTheme}
+          aria-label="Toggle theme"
+          className="navIconButton"
+        >
+          {isDarkMode ? <SunIcon /> : <MoonIcon />}
+        </button>
+      </div>
+      <div className="navBarCenter">
+        <Link to="/">Home</Link>
+        <Link to="/experience">Experience</Link>
+        <Link to="/projects">Projects</Link>
+        <Link to="/musings">Musings</Link>
       </div>
       <div className="navBarRight">
         <a
@@ -53,7 +63,7 @@ const NavBar = () => {
           <LinkedinIcon />
         </a>
       </div>
-    </div>
+    </nav>
   );
 };
 

@@ -1,13 +1,45 @@
 :root {
   /* Light mode colors */
   background-color: #f9f7f4;
-  --text-color: black;
-  --icon-color: black;
+  --text-color: #2c2c2c;
+  --text-secondary: #6b6b6b;
+  --icon-color: #8a8a8a;
+  --surface-color: rgba(255, 255, 255, 0.7);
+  --border-color: rgba(0, 0, 0, 0.06);
+  --nav-link-color: #8a8a8a;
+  --nav-link-hover: #2c2c2c;
 }
 
 .dark {
-  /* Dark mode colors */
-  background-color: #333333;
-  --text-color: white;
-  --icon-color: white;
+  /* Dark mode — grayscale palette */
+  background-color: #000000;
+  --text-color: #ffffff;
+  --text-secondary: #e5e5e5;
+  --icon-color: #e5e5e5;
+  --surface-color: #090909;
+  --border-color: #262626;
+  --nav-link-color: #e5e5e5;
+  --nav-link-hover: #ffffff;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+*,
+*::before,
+*::after {
+  transition: background-color 0.4s ease, color 0.4s ease, border-color 0.4s ease;
+}
+
+.placeholderSection {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 4em 1.5em;
+  color: var(--text-color);
+  font-family: "Poppins", sans-serif;
+}
+
+.placeholderSection p {
+  color: var(--text-secondary);
 }

@@ -1,23 +1,22 @@
 import React from "react";
-import profilePic from "../images/profilepic.jpeg";
+import TypingEffect from "./TypingEffect";
 import "./aboutme.css";
 
 const Aboutme = () => {
   return (
-    <div className="aboutmeBackground">
-      <div className="aboutmeContainer">
-        <h1>Hey, I'm Julian 👋</h1>
-        <span>📍 Evanston, IL</span>
-        <div className="aboutmeTextContainer">
-          <p>
-            Hey there! I'm Julian, a Sophomore studying at Northwestern
-            University. I'm in the process of attaining my bachelors of Science
-            in Computer Science. I'm interested in full stack software
-            engineering, and I'm particularly fascinated by UI/UX design!
-          </p>
-          <img src={profilePic} alt="Picture of me" />
-        </div>
+    <div className="aboutmeContainer">
+      <div className="aboutmeGreeting">
+        <TypingEffect lines={["Hey, I'm Julian"]} speed={60} />
       </div>
+      <p className="aboutmeSubtitle">
+        Aspiring Software Engineer, Singaporean, and Sushi Lover.
+      </p>
+      <p className="aboutmeBio">
+        Welcome to my personal portfolio! I'm Julian, a Junior at Northwestern
+        University, pursuing a B.S. in Computer Science. I'm particularly
+        interested in AI and building products for people to use!
+      </p>
+      <p className="aboutmeLocationLine">Singapore → Evanston, IL</p>
     </div>
   );
 };
