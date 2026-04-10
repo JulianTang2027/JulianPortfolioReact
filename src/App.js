@@ -9,7 +9,7 @@ import MusingDetail from "./sections/musingDetail.jsx";
 
 function App() {
   return (
-    <BrowserRouter>
+    <BrowserRouter basename="/JulianPortfolioReact">
       <NavBar />
       <Routes>
         <Route path="/" element={<Header />} />
