@@ -1,0 +1,89 @@
+.musingDetailContainer {
+  position: relative;
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 3em 1.5em;
+  font-family: "Poppins", sans-serif;
+  min-height: calc(100vh - 80px);
+}
+
+.musingBackLink {
+  position: relative;
+  z-index: 1;
+  display: inline-block;
+  font-size: 0.75rem;
+  font-style: italic;
+  color: var(--text-secondary);
+  text-decoration: none;
+  margin-bottom: 2.5em;
+  transition: color 0.2s ease;
+}
+
+.musingBackLink:hover {
+  color: var(--text-color);
+}
+
+.musingDetailEntry {
+  position: relative;
+  z-index: 1;
+  opacity: 0;
+  transform: translateY(10px);
+  animation: musingDetailFadeIn 0.6s ease forwards;
+}
+
+@keyframes musingDetailFadeIn {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.musingDetailDate {
+  font-family: "Courier New", monospace;
+  font-size: 0.7rem;
+  color: var(--text-secondary);
+  letter-spacing: 0.05em;
+  display: block;
+  margin-bottom: 0.6em;
+}
+
+.musingDetailTitle {
+  font-family: "Poppins", sans-serif;
+  font-size: 1.4rem;
+  font-weight: 500;
+  color: var(--text-color);
+  margin: 0 0 1.5em;
+}
+
+.musingDetailBody {
+  font-family: "Poppins", sans-serif;
+  font-size: 0.9rem;
+  color: var(--text-secondary);
+  line-height: 1.9;
+  margin: 0 0 1.4em;
+}
+
+.musingDetailBody:last-child {
+  margin-bottom: 0;
+}
+
+.musingNotFound {
+  position: relative;
+  z-index: 1;
+  font-size: 0.9rem;
+  color: var(--text-secondary);
+}
+
+@media (max-width: 480px) {
+  .musingDetailContainer {
+    padding: 2em 1em;
+  }
+
+  .musingDetailTitle {
+    font-size: 1.2rem;
+  }
+
+  .musingDetailBody {
+    font-size: 0.82rem;
+  }
+}

@@ -1,0 +1,96 @@
+.musingsContainer {
+  position: relative;
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 3em 1.5em;
+  font-family: "Poppins", sans-serif;
+  min-height: calc(100vh - 80px);
+}
+
+/* Scribble doodles layer — covers full viewport */
+.scribbleLayer {
+  position: fixed;
+  inset: 0;
+  width: 100%;
+  height: 100vh;
+  pointer-events: none;
+  z-index: 0;
+  overflow: hidden;
+}
+
+.scribble {
+  position: absolute;
+  width: 120px;
+  height: 55px;
+  opacity: 0.3;
+}
+
+.scribble path {
+  fill: none;
+  stroke: var(--text-secondary);
+  stroke-width: 1.2;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke-dasharray: 500;
+  stroke-dashoffset: 500;
+  animation: drawAndErase 18s ease infinite;
+}
+
+/*
+  0%        — hidden
+  25%       — fully drawn in (slow draw)
+  55%       — hold visible
+  80%       — erased out (slow erase)
+  100%      — stay hidden before loop
+*/
+@keyframes drawAndErase {
+  0% {
+    stroke-dashoffset: 500;
+  }
+  25% {
+    stroke-dashoffset: 0;
+  }
+  55% {
+    stroke-dashoffset: 0;
+  }
+  80% {
+    stroke-dashoffset: -500;
+  }
+  100% {
+    stroke-dashoffset: -500;
+  }
+}
+
+.musingsSubtitle {
+  position: relative;
+  z-index: 1;
+  font-size: 0.75rem;
+  font-style: italic;
+  color: var(--text-secondary);
+  margin: 0 0 2em;
+}
+
+/* Entries */
+.musingsEntries {
+  position: relative;
+  z-index: 1;
+}
+
+@media (max-width: 768px) {
+  .scribble {
+    width: 90px;
+    height: 40px;
+  }
+}
+
+@media (max-width: 480px) {
+  .musingsContainer {
+    padding: 2em 1em;
+  }
+
+  .scribble {
+    width: 70px;
+    height: 32px;
+    opacity: 0.2;
+  }
+}

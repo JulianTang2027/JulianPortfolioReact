@@ -1,0 +1,74 @@
+.musingCardLink {
+  display: block;
+  text-decoration: none;
+  color: inherit;
+}
+
+.musingCard {
+  position: relative;
+  padding: 1.2em 0;
+  opacity: 0;
+  transform: translateY(10px);
+  animation: musingFadeIn 0.6s ease forwards;
+  transition: transform 0.2s ease;
+}
+
+.musingCardLink:hover .musingTitle {
+  color: var(--text-secondary);
+}
+
+@keyframes musingFadeIn {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.musingDate {
+  font-family: "Courier New", monospace;
+  font-size: 0.65rem;
+  color: var(--text-secondary);
+  letter-spacing: 0.05em;
+  display: block;
+  margin-bottom: 0.4em;
+}
+
+.musingTitle {
+  font-family: "Poppins", sans-serif;
+  font-size: 0.95rem;
+  font-weight: 500;
+  color: var(--text-color);
+  margin: 0 0 0.3em;
+}
+
+.musingBody {
+  font-family: "Poppins", sans-serif;
+  font-size: 0.82rem;
+  color: var(--text-secondary);
+  line-height: 1.7;
+  margin: 0;
+}
+
+/* Wobbly hand-drawn underline */
+.musingUnderline {
+  display: block;
+  width: 100%;
+  height: 6px;
+  margin-top: 1em;
+}
+
+.musingUnderline path {
+  fill: none;
+  stroke: var(--border-color);
+  stroke-width: 0.8;
+  stroke-linecap: round;
+  stroke-dasharray: 300;
+  stroke-dashoffset: 300;
+  animation: drawUnderline 0.8s ease forwards;
+}
+
+@keyframes drawUnderline {
+  to {
+    stroke-dashoffset: 0;
+  }
+}
