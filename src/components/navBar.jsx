@@ -8,7 +8,7 @@ import SunIcon from "../icons/sunIcon";
 import "./navBar.css";
 
 const NavBar = () => {
-  const [isDarkMode, setIsDarkMode] = useState(true);
+  const [isDarkMode, setIsDarkMode] = useState(false);
 
   useEffect(() => {
     if (isDarkMode) {
