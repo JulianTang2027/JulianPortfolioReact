@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/JulianPortfolioReact/static/css/main.52e2ffa9.css",
+    "main.js": "/JulianPortfolioReact/static/js/main.33142aad.js",
+    "static/js/488.1096ef7a.chunk.js": "/JulianPortfolioReact/static/js/488.1096ef7a.chunk.js",
+    "index.html": "/JulianPortfolioReact/index.html",
+    "main.52e2ffa9.css.map": "/JulianPortfolioReact/static/css/main.52e2ffa9.css.map",
+    "main.33142aad.js.map": "/JulianPortfolioReact/static/js/main.33142aad.js.map",
+    "488.1096ef7a.chunk.js.map": "/JulianPortfolioReact/static/js/488.1096ef7a.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.52e2ffa9.css",
+    "static/js/main.33142aad.js"
+  ]
+}
