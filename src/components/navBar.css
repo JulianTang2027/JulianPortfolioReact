@@ -10,8 +10,26 @@
   z-index: 10;
 }
 
-.navBar a svg {
+.navBar a svg,
+.navBar .navIconButton svg {
   stroke: var(--icon-color);
+}
+
+.navIconButton {
+  background: none;
+  border: none;
+  padding: 0;
+  margin: 0;
+  color: inherit;
+  font: inherit;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  transition: transform 0.2s ease;
+}
+
+.navIconButton:hover {
+  transform: translateY(-3px);
 }
 
 .navBarLeft {
@@ -69,4 +87,50 @@
 .navBar a:visited,
 .navBar a:active {
   text-decoration: none;
+}
+
+@media (max-width: 768px) {
+  .navBar {
+    margin: 1rem 1.5rem;
+  }
+
+  .navBarCenter {
+    gap: 1.2rem;
+  }
+
+  .navBarCenter a,
+  .navBarCenter a:link,
+  .navBarCenter a:visited {
+    font-size: 0.78rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .navBar {
+    margin: 0.8rem 1rem;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0.5rem;
+  }
+
+  .navBarLeft {
+    order: 1;
+  }
+
+  .navBarRight {
+    order: 2;
+  }
+
+  .navBarCenter {
+    order: 3;
+    width: 100%;
+    justify-content: center;
+    gap: 1rem;
+  }
+
+  .navBarCenter a,
+  .navBarCenter a:link,
+  .navBarCenter a:visited {
+    font-size: 0.75rem;
+  }
 }

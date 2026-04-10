@@ -1,12 +1,10 @@
 import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
-import "../styles/navBar.css";
 import MailIcon from "../icons/mailIcon";
 import GithubIcon from "../icons/githubIcon";
 import LinkedinIcon from "../icons/linkedinIcon";
 import MoonIcon from "../icons/moonIcon";
 import SunIcon from "../icons/sunIcon";
-import PaletteIcon from "../icons/paletteIcon";
 import "./navBar.css";
 
 const NavBar = () => {
@@ -27,10 +25,14 @@ const NavBar = () => {
   return (
     <nav className="navBar">
       <div className="navBarLeft">
-        <a onClick={toggleTheme}>{isDarkMode ? <SunIcon /> : <MoonIcon />}</a>
-        <a>
-          <PaletteIcon />
-        </a>
+        <button
+          type="button"
+          onClick={toggleTheme}
+          aria-label="Toggle theme"
+          className="navIconButton"
+        >
+          {isDarkMode ? <SunIcon /> : <MoonIcon />}
+        </button>
       </div>
       <div className="navBarCenter">
         <Link to="/">Home</Link>
