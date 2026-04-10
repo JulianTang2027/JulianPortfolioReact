@@ -10,6 +10,12 @@
   color: var(--text-color);
 }
 
+@media (max-width: 480px) {
+  .typing-effect {
+    font-size: 1.4em;
+  }
+}
+
 .typing-effect h1 {
   margin: 0;
   padding: 0;

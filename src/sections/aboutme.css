@@ -7,51 +7,33 @@
   align-items: flex-start;
 }
 
-.aboutmeTextContainer {
-  display: flex;
-  flex-direction: row;
-  align-items: flex-start;
-  gap: 2em;
-  margin-top: 1.5em;
+.aboutmeSubtitle {
+  font-size: 0.75rem;
+  font-style: italic;
+  color: var(--text-secondary);
+  margin: 1.5em 0 2em;
 }
 
-.aboutmeTextContainer p {
+.aboutmeBio {
   color: var(--text-secondary);
   font-size: 0.9rem;
   line-height: 1.8;
   margin: 0;
 }
 
-.aboutmeTextContainer img {
-  border-radius: 50%;
-  width: 8em;
-  height: 8em;
-  object-fit: cover;
-  flex-shrink: 0;
-}
-
-.aboutmeLocations {
-  display: flex;
-  gap: 1em;
-  margin-top: 1.5em;
-}
-
-.locationCard {
-  flex: 1;
-  display: flex;
-  flex-direction: column;
-  gap: 0.4em;
-}
-
-.locationLabel {
-  font-size: 0.7rem;
-  text-transform: uppercase;
-  letter-spacing: 0.08em;
+.aboutmeLocationLine {
+  font-size: 0.8rem;
   color: var(--text-secondary);
+  letter-spacing: 0.05em;
+  margin-top: 2.5em;
 }
 
-.locationName {
-  font-size: 0.85rem;
-  font-weight: 500;
-  color: var(--text-color);
+@media (max-width: 480px) {
+  .aboutmeBio {
+    font-size: 0.82rem;
+  }
+
+  .aboutmeLocationLine {
+    font-size: 0.72rem;
+  }
 }
