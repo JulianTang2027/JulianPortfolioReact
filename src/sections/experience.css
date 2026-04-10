@@ -6,6 +6,13 @@
   font-family: "Poppins", sans-serif;
 }
 
+.experienceSubtitle {
+  font-size: 0.75rem;
+  font-style: italic;
+  color: var(--text-secondary);
+  margin: 0 0 1.5em;
+}
+
 .experienceToggle {
   display: flex;
   gap: 0;
@@ -43,9 +50,13 @@
 }
 
 .timelineItem {
-  display: flex;
-  gap: 1.2em;
-  align-items: stretch;
+  display: grid;
+  grid-template-columns: 7em 12px 1fr;
+  gap: 0 1.2em;
+}
+
+.timelineItem:last-child .timelineContent {
+  padding-bottom: 0;
 }
 
 .timelineItem.fadeIn {
@@ -64,8 +75,7 @@
 .timelineYear {
   font-size: 0.75rem;
   color: var(--text-secondary);
-  min-width: 5em;
-  padding-top: 0.2em;
+  padding-top: 0.3em;
   text-align: right;
 }
 
@@ -73,8 +83,6 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  width: 12px;
-  flex-shrink: 0;
 }
 
 .timelineDot {
@@ -83,7 +91,7 @@
   border-radius: 50%;
   background-color: var(--text-color);
   flex-shrink: 0;
-  margin-top: 0.35em;
+  margin-top: 0.4em;
 }
 
 .timelineBar {
@@ -115,4 +123,31 @@
   color: var(--text-secondary);
   line-height: 1.7;
   margin: 0.6em 0 0;
+}
+
+@media (max-width: 480px) {
+  .experienceContainer {
+    padding: 2em 1em;
+  }
+
+  .timelineItem {
+    grid-template-columns: 5em 12px 1fr;
+    gap: 0 0.8em;
+  }
+
+  .timelineYear {
+    font-size: 0.65rem;
+  }
+
+  .timelineContent h3 {
+    font-size: 0.85rem;
+  }
+
+  .timelineContent p {
+    font-size: 0.78rem;
+  }
+
+  .timelineRole {
+    font-size: 0.72rem;
+  }
 }
